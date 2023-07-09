@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>-</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+&lt;!DOCTYPE html&gt;
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<title>
+-
+</title>
+<style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+<!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="flickering-lamplight">
+Flickering Lamplight:
+</h1>
+<p>
+Flickering Lamplight was written for the A Town, A Forest, A Dungeon game jam, hosted by Yochai Gal for the Cairn game system.
+</p>
+<h2 id="two-decades-ago">
+Two Decades Ago
+</h2>
+<p>
+In brazen political coup, the Oberant Dynasty seized control of the cathedral cities of the Commerand Empire overnight, flooding senate seats made vacant by careful mismanagement from the Belinus Priesthood. Simmering with imperialist zeal, it was not long before the dynasty’s fanaticism boiled over into the neighbouring nation of Thruule, beginning years of devastating crusades, purging the lands and stamping out cities and townships, festivals and traditions.
+</p>
+<p>
+In the aftermath, great roads were erected, splitting out from the heart of Commerand through the lands of Thruule, serving to ensure safe passage for sanctioned merchant’s and passing nobility. It served a second purpose, to solidify the dynasty’s authority across the conquered Thruule and the outer reaches of an empire spread all too thin. Brigades of lamplighters, in sharp blue duffle coats kept the post lamps along these roads lit and the way clear.
+</p>
+<p>
+One such road, the Oberant Road, stretches through the Landes, a great stretch of woods splitting the northern border between Commerand and Thruule, it’s furthest edges never mapped. Alongside the newly erected toll-gate rose the settlement of Rousllin, a temporary township of displaced Thruulians.
+</p>
+<h2 id="eight-years-ago">
+Eight Years Ago
+</h2>
+<p>
+Faced with immense debt and pending economic collapse after years of cancerous growth, the lamplighters funding was cut to nothing. Some brigades remained fanatically faithful to the empire, turning to extortion, wringing all they could from the townships they protected, others to banditry, preying on the travellers they had sheltered. Others still abandoned the coat, quietly integrating into the communities the road passed. One such battalion that had kept the lanterns lit along the Oberant Road chose to s
+</p>
+<p>
+As the toll gate emptied, the town of Rousllin filled, an apothecary was built, a general store founded and a marketplace sprouted alongside surrounding homesteads. Rousllin forged a strong community in the hardships of the Landes between Lamplighters and Thruulians alike.
+</p>
+<h2 id="two-days-ago">
+Two Days Ago
+</h2>
+<p>
+A dynasty-sanctioned merchant convoy was attacked at the long abandoned toll gate that straddles the Oberant Road, just a short wander from the village of Rousllin. Ever since, an unnerving groaning, a heavy creaking echoes through the wood and up the road from the old barracks. A hunting party has been reported missing, and more and more and source less shadows have been spotted in the woods. Under otherworldly threat the villagers of Rousllin
+</p>
+<p>
+The village of Rousllin is faced with starvation as the forest’s that surround it grows more unfriendly with each passing day, rumours of shadows walking the woods keep frightened inhabitants inside.
+</p>
+<p>
+Wrought iron post lamps line the Old Road, once busy night and day with passing nobles and hopeful merchants bridging the distance between the continent’s two great centres of commerce and industry, now, as either city has fallen to disrepair, so has the road between.
+</p>
+<h3 id="treasure">
+Treasure:
+</h3>
+<p>
+<strong>Relic: (Pair of Shears? Dagger? Utility Knife?)</strong> Cut your shadow from your body, cast Mirror Image. The duplicate is of darkness, a perfect match of form, shape, and silhouette but a shadow. When this spell is cast in this way, lose 1d4 STR until your shadow returns (or gain a fatigue until the shadow returns?).
+</p>
+<h3 id="quest-lines">
+Quest Lines:
+</h3>
+<p>
+Several convoy’s have gone missing looking to pass through the old Toll Gate on the road that split’s this forest. While higher regional authority claim to have registered the issue, the issue has appeared to have passed below the notice of this authority (in truth, a Paladin has been dispatched after hearing of demonic presence, however no word has been sent to the Village with the intention of avoiding inciting a panic) and Village leader’s are desperate for assistance.
+</p>
+<p>
+A hunting party has been separated on the other side of the road, among them are partners of those left at the Village desperate to see their safe return.
+</p>
+<p>
+<img src="pictures/landes.png" />
+</p>
+<h2 id="forest-splodges">
+Forest Splodges
+</h2>
+<p>
+Travelling between splodges takes one hour by foot, the Landes is too dense to be navigated otherwise
+</p>
+<p>
+Upon entering a forest splodge, roll 1d6 to determine what travellers may stumble across in the Landes, then a second 1d6 to determine whether they encounter; tracks, traces or some strange fellow inhabitant of the Landes. On a 1-2, travellers find traces, a 3-4 tracks that can be followed, and on a 5-6 the encounter itself. If travellers are looking to follow tracks, re-roll the second 1d6 and add 2, counting rolls over 6 as 6.
+</p>
+<ul>
+<li>
+<strong>1.</strong> <em>Lamp Post Ogre.</em> Enormously tall, long arms, short stumps of legs, smeared with mud and thick patches of lichen. Using a lamp post torn from the road, the ogre lures those lost in the woods, flattening itself against the ground hands wrapped around the base of the post. Ravenously hungry, it explodes from the forest floor to bludgeon any foolish enough to wander close enough, looking to eat any it can mash. It is terrified of moths, while one eye scours the woods, the other forever flicks across the night sky, anxious with worry.
+<ul>
+<li>
+<em>Tracks:</em> Long, even furrows run alongside a set of heavy footfalls. a foul unwashed smell lingers.
+</li>
+<li>
+<em>Traces:</em> Viscera of a smashed deer, horrendous smell, the front half missing, the back spread across a wide swath of undergrowth. careful investigation reveals heavy blows from some great weight split the deer.
+</li>
+</ul>
+</li>
+<li>
+<strong>2.</strong> <em>Renauld de Montbaun.</em> Dispatched by the state clergy after word was sent to the local parish of shadows stalking the Oberant road. Renauld is a holy paladin of Belinus, who’s light splits the darkness and lays bare naked truth, sent to squash any demonic threat and to inspire the lost lamplighter officer’s of Rousllin to return to active duty for a pittance. Disdainful of the Landes lightless populace, Renauld is a resolute champion of the empire, and speaks in grand declarations of it’s virtues. Sitting atop a warhorse, Renauld wears a full set of polished plate, adorned in Belinus’ distinctive burning rings. He has wandered far from the road, and without guidance will continue to wander in meandering circles til he starves.
+<ul>
+<li>
+<em>Tracks:</em> Heavily laden hoof marks, carelessly trampled bushes and churned mud. Low hanging branches have been cut and broken. Curse’s, oath’s and expression’s of disgust alongside heavy hoof step mean Renauld is likely to be heard before seen.
+</li>
+<li>
+<em>Traces:</em> Holy symbol of Belinus, this Relic has been torn free from the chain Renauld had hung it on. with this symbol the spell Illuminate can be freely cast, however it’s light will only remain while the user chant’s a prayer to Belinus. When the prayer ends, the light vanishes.
+</li>
+</ul>
+</li>
+<li>
+<strong>3.</strong> <em>Roaming Shadows.</em> Shaped by lamplight, 1d6 shadows cut free from hapless hunters and wayward wanderers stagger through the Landes. Horrified by strong light, they will attack any light bearer’s until that light is extinguished, otherwise unresponsive.
+<ul>
+<li>
+<em>Tracks:</em> Deep cuts in the shadows of surrounding vegetation, tree trunks and bushes.
+</li>
+<li>
+<em>Traces:</em> Dead body, torn clothing, clear signs of a desperate fight lost dearly, 1d6 copper pieces. Held in their hand, a careful wood carving of the sun, a charm made in the manner of outer Landes interpretation of Belinus, who’s name heralds the morning’s splendour and warms the evening’s hearth. Light cast on the corpse reveals no shadow.
+</li>
+</ul>
+</li>
+<li>
+<strong>4.</strong> <em>Hunting Party.</em> Clad in heavy leathers, and distinctive Thruulian brimless caps, 1d6 hunters of Rousllin prowl the forest, carrying lit torches and short bows, arrow nocked. Tired and grim, the hunters are quick to check shadows. They are hunting the <em>Roaming Shadows</em> that attacked them two day’s prior while crossing the Oberant Road. crossing across to return to Rousllin.
+<ul>
+<li>
+<em>Tracks:</em> Light footprints along animal trails.
+</li>
+<li>
+<em>Traces:</em> A rabbit snare, maybe a hand’s width wide, 1-2 a dead rabbit is caught in the snare, 3-4; the snare is empty, 5-6; the snare is broken, trampled underfoot.
+</li>
+</ul>
+</li>
+<li>
+<strong>5.</strong> <em>Unbound Shadow.</em> A merchant, face burnt, staggers through the forest. During the attack on the convoy at the toll gate, a great shadow collapsed on the wagons, shattering axles and bones. The merchant awoke by the fire, saw a man in a blue coat kneeling at the foot of the burning pyre, by another merchant’s corpse, before the merchant tore off into the woods. They believe something followed them from the road, and have been staggering through the woods in a paranoid frenzy for days. They do not cast a shadow.
+<ul>
+<li>
+<em>Tracks:</em> A shadow hunts the merchant, stretched thin and long, as if the shadow was cast upon a vast distance. It strides through the forest, driven by an unshakable desire to devour them whole, with no care for anything else. It will not lose the merchant.
+</li>
+<li>
+<em>Traces:</em>
+</li>
+</ul>
+</li>
+<li>
+<strong>6.</strong> <em>The Moth.</em> remarkably similar to a Peppered Moth, white speckled with splodges of black growing denser from wingtips to a solid black at it’s bushy antennae. Enormous.
+<ul>
+<li>
+<em>Tracks:</em> child, survivor ran from the homestead. believes they saw someone moving admist the bodies, hopes another surviror might wait at the cabin, in truth, they saw the shadow’s silhouette.
+</li>
+<li>
+<em>Traces:</em> The Moth left a homestead devastated here, collapsing rooftops, shattering windows and leaving the broken bodies of a Thruulian family draped ac. The bodies that lie broken. draped shattering windows attacked here, leaving shadowless bodies broken. All bodies but one has their shadow severed, that shadow lies in hiding, prepared to ambush passer bys. the Moth’s presence is clearer in the barn?
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="road-splodges">
+Road Splodges
+</h2>
+<p>
+A demon has tempted the lost and lonely of the Landes, torn from Thruulian myths lost in the crusades, known to the villagers in spoken word, a warding rhyme to keep children from distant lights, never to squash, bash or mash any of the wide winged mites that flutter around a night’s lamp.
+</p>
+<p>
+It’s motivation is to rid the Landes of light, and will do what it can to tempt it’s inhabitants to let their shadows run rampant.
+</p>
+<p>
+In it’s words is a playfulness that hides a deeply intelligent spite driven by an…It is hypnotised by tremendous sources of light, yet terrified of fire, the light that grows and spreads of it’s own accord.
+</p>
+<p>
+Known by the villagers of Rousllin as the Old Road, by the mapmakers of Commerand as Oberant’s Road and as simply Oberants to ex-lamplighters.
+</p>
+<p>
+<em>Phillip Debois, Lamplighter Private.</em> Phillip might just be the last lamplighter on duty in Landes, diligently going on twenty years of service, moving through every motion as written in Lamplighter’s Handbook, his closest companion. He has patrolled the same set of twelve lamps, numbered La#2492 to La#2504, taking careful note of each and every one, in the high collar blue duffle uniform as detailed in Chapter Three. In recent days however, wandering shadows have slashed and cut at the post lamps, toppling some, continuing to stalk the others. He operates out of a…
+</p>
+<ul>
+<li>
+<em>Burning Pyre:</em> A mess of shattered merchant wagons burns, casting shaking light around it, throwing the gate’s silhouette on the road behind it, it’s shadow exaggerated in length. A thick cloud of moths blur the air surrounding the fire. Long dark streaks from the fire mark the trail of bodies dragged to the gate’s right doorway.
+</li>
+<li>
+<em>Control Room:</em> stair’s wind around great cogs. broken, control gate. Nicholas tinkers here.
+</li>
+<li>
+<em>Archives:</em> decades of copies, bi-annual reports and other bureaucratic paper fill this room in reams on desks, scrolls on shelves and by the pound in shelving cabinets.
+</li>
+<li>
+<em>Officers Quarters:</em> three rooms, only one is well kept, the others left undisturbed these past 16 years.
+</li>
+<li>
+<em>The Bridge:</em> The Moth and the shadow of Nicholas wait here. Toppled chairs, tables and shattered fallen stones are coated in thick milky sheets of silk riddled with larvae.
+</li>
+<li>
+<em>Armoury:</em> long halberds lie scattered on the ground here. trap involving the missing shadow heads of said spears.
+</li>
+<li>
+<em>General Quarters:</em> long ladders lead up dozens of bunks. unsteady?
+</li>
+<li>
+<em>Collapsed Storeroom:</em> the floor has given way here, spilling barrels of tar down into the room below.
+</li>
+<li>
+<em>Flooded Workshop:</em> flooded with lamp tar once used to light lamps.
+</li>
+</ul>
+<h2 id="village-splodge">
+Village Splodge
+</h2>
+<p>
+A 15 foot palisade of log’s surrounds the settlement of Rousllin, once sharp, now dulled with age, tar seals the gaps between logs and climbing blankets of moss and ivy have steadily grown up along it’s base. Well trodden dirt roads lead into town through fields of barley wheat, most left unharvested?. The road twists it’s way into and through the heart of town, either end watched by a rotating pair of villagers.
+</p>
+<ul>
+<li>
+<strong>Apothecary:</strong> Maeve, a second generation Thruulian and owner of the apothecary works closely with Hugo, a grumbling medical student of Oberant’s capital (stranded due to the Toll-Gate’s blockade) to care for a pair of hunter’s. Both are ex-Lamplighters, one unconscious, shivering and shadowless, the other recovering from a shattered knee. Both sustained the injury while searching for the long <em>Hunting Party.</em>
+<ul>
+<li>
+<strong>Quest 1:</strong> Collect bone white, bleached lichen to treat strange aches of villagers.
+</li>
+<li>
+<strong>Quest 2:</strong> Recover word of <em>Hunting Party</em> from beyond the Old Road.
+</li>
+</ul>
+</li>
+<li>
+<strong>Stables:</strong> several clean, well kept horses are kept alongside a pair of starstruck mules.
+</li>
+<li>
+<strong>Shrine:</strong> a small stone throne, decorated in carefully carved and charred sigils to Belinus of varying sizes hanging on lengths of red twine hanging loosely up the shrine. At its top, a fire is kept smouldering overnight in a stone bowl, left to burn to embers in the morning.
+</li>
+<li>
+<strong>Roosted Jay:</strong> the town’s tavern, a squat two story wooden hostel and heart of Rousllin. The Jay is owned by Shannon Hayes and has been in Hayes hands since the first raised tents by the founding stones at the Tollgate’s construction. Shannon’s children can be found anywhere in the village, behind counters, underneath resting wagons, balancing along rooftops.
+<ul>
+<li>
+<strong>Quest 1:</strong> Track down each of Shannon’s children. Can be found hiding, running about, reading and playing with strange caterpillars than drain the colour from their arms.
+</li>
+<li>
+<strong>Quest 2:</strong> Assist the merchants by clearing the disturbance at the toll gate for a steep fee.
+</li>
+</ul>
+</li>
+<li>
+<strong>General Store:</strong> Anything sensible can be bought, however has a 50% chance of not being available. Among local oddities and knick nacks specific to the Landes, can be found jars of caterpillars that chew at the colour surrounding them. Storekeeper’s hand has been drained to a grayscale while collecting them, carefully hidden under crushed pigment.
+</li>
+</ul>
+<p>
+An apothecary, an inn, stables, smithy, a temple and a market.
+</p>
+<h2 id="populace-of-rousllin">
+Populace of Rousllin
+</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>
+1d6
+</th>
+<th>
+Origin
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+1-3
+</td>
+<td>
+Thruulian Villagers, descendant of refugees left stranded after the Oberant Crusade that came to settle at Rousllin. Older Thruulians wear brimless fur hats, and still harbour a deep wariness of Oberant authority. Younger Thruulian’s…
+</td>
+</tr>
+<tr class="even">
+<td>
+4-5
+</td>
+<td>
+Ex-Lamplighters, after walking from the dynasty’s thinning payroll, those that remained in the Landes have found friends and family in the community of Rousllin. While all have hung up the blue duffle, identifying first as villager, second as Oberant turncoat, a lifetime of disciplined vigilance leaves it’s mark, as some watch the roads into town after dark, and all take care to keep the town light’s lit.
+</td>
+</tr>
+<tr class="odd">
+<td>
+6
+</td>
+<td>
+Oberant Merchants, stranded in the village, who’s once shining black boots, the pride of any proud servant of the Dynasty, have stained a regular dull mud brown, much to their horror. Treat the town with a universal derision, but holding a special disgust for ex-Lamplighters, and their perceieved scorn regarding the Oberant Dynasty.
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Roll 1d6 to colour a villager with distinctive characteristics.
+</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>
+1d6
+</th>
+<th>
+Mannerisms
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+1
+</td>
+<td>
+Cleans glasses obsessively, beyond any sensible measure of cleanliness.
+</td>
+</tr>
+<tr class="even">
+<td>
+2
+</td>
+<td>
+Brings up ever-loving warmth of Belinus’ wherever possible.
+</td>
+</tr>
+<tr class="odd">
+<td>
+3
+</td>
+<td>
+Long, wondering, thoughtful pauses between sentences.
+</td>
+</tr>
+<tr class="even">
+<td>
+4
+</td>
+<td>
+Always frazzled, always busy and always right in the middle of something.
+</td>
+</tr>
+<tr class="odd">
+<td>
+5
+</td>
+<td>
+Terrible at remembering names, determined to get them right, will never get it.
+</td>
+</tr>
+<tr class="even">
+<td>
+6
+</td>
+<td>
+Always scratching their chin, with a hand mysteriously drained to a dull grayscale.
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+When chatting with a villager, roll 1d6 to determine what rumours they might have heard in recent days.
+</p>
+<table>
+<thead>
+<tr class="header">
+<th>
+1d6
+</th>
+<th>
+Truth
+</th>
+<th>
+Rumours
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>
+Crazy lamplighter’s continue to stalk the toll-gate, still desperately looking to fix the broken boom, obsessing over it’s reconstruction (True)
+</li>
+<li>
+As the postlamps have vanished, so has risen a giant Moth, angered by their destruction and left adrift, lost in the skies of the Landes without their guiding lights on it’s way to the Moon from the Moaning Mountain. So the Moth flutters over the Landes, searching for the lights to send it on it’s way home. (Half True?)
+</li>
+<li>
+Lamplighters used to stand on each others shoulders to reach the lamps as they were lit, up to three at a time. (False)
+</li>
+<li>
+The Oberant Dynasty have heard word of the Landes lamplighters defection, and have sent forth a great army of priests to return them to service. (Not quite True.)
+</li>
+<li>
+Among the village are direct descendant’s of the Thruulian aristocracy, who vanished into the Landes at the height of the Crusade’s devastation. (True)
+</li>
+<li>
+Commerand merchant’s sheltering in Rousllin are concealing a great treasure of…? (False)
+</li>
+</ol>
+<p>
+Thruulian: Irish names.
+</p>
+<p>
+Commerand: French names.
+</p>
+</body>
+</html>
+</body>
+</html>
